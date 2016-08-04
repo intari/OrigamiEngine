@@ -211,7 +211,7 @@
 				ORGANIZATIONNAME = ap4y;
 				TargetAttributes = {
 					959B579E15CEDDA700D44955 = {
-						DevelopmentTeam = XBATE65C2P;
+						DevelopmentTeam = 676N56ZGY4;
 					};
 				};
 			};
@@ -374,6 +374,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../Audio-Frameworks/bin/flac",
@@ -387,6 +388,7 @@
 				INFOPLIST_FILE = "ORGMEngine Example/ORGMEngine Example-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,6 +398,7 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../Audio-Frameworks/bin/flac",
@@ -409,6 +412,7 @@
 				INFOPLIST_FILE = "ORGMEngine Example/ORGMEngine Example-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -61,7 +61,7 @@
 
 #pragma mark - public
 
-- (void)playUrl:(NSURL *)url withOutputUnitClass:(Class)outputUnitClass {
+- (void)playUrl:(NSURL *)url withOutputUnitClass:(Class)outputUnitClass andFakeExtension:(NSString*)extension {
     if (!outputUnitClass || ![outputUnitClass isSubclassOfClass:[ORGMOutputUnit class]]) {
 
         @throw [NSException exceptionWithName:NSInternalInconsistencyException
@@ -77,7 +77,7 @@
         self.input = input;
         [input release];
 
-        if (![_input openWithUrl:url]) {
+        if (![_input openWithUrl:url andFakeExtension:extension]) {
             self.currentState = ORGMEngineStateError;
             self.currentError = [NSError errorWithDomain:kErrorDomain
                                                     code:ORGMEngineErrorCodesSourceFailed
@@ -113,9 +113,9 @@
     });
 }
 
-- (void)playUrl:(NSURL *)url {
+- (void)playUrl:(NSURL *)url withFakeExtension:(NSString*) fakeExtension{
 
-  [self playUrl:url withOutputUnitClass:[ORGMOutputUnit class]];
+  [self playUrl:url withOutputUnitClass:[ORGMOutputUnit class] andFakeExtension:fakeExtension];
 }
 
 - (void)pause {

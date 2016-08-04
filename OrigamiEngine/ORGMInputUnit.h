@@ -45,7 +45,7 @@
 
  @return `YES` if success, otherwise `NO`.
  */
-- (BOOL)openWithUrl:(NSURL *)url;
+- (BOOL)openWithUrl:(NSURL *)url andFakeExtension:(NSString*) fakeExtension ;
 
 /**
  Closes input unit and corresponding decoder, deallocates unnecessary resources.

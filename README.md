@@ -1,3 +1,14 @@
+Forked Origami from http://ap4y.github.com/OrigamiEngine/ for my purposes 
+Main modification is that play method signature is changed to  - (void)playUrl:(NSURL *)url withFakeExtension:(NSString*) fakeExtension;
+REAL extension doesn't matter anymore
+
+dont forget do do on develop 
+* git submodule init
+* git submode update
+* git submodule status
+
+
+Old README.md below
 Lightweight iOS and OSX audio engine with opus, flac, cue, mp3, m4a, m3u support.
 
 Supported formats

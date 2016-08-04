@@ -60,7 +60,7 @@
  
  @return A new decoder object or `nil` if corresponding plugin is not found.
  */
-- (id<ORGMDecoder>)decoderForSource:(id<ORGMSource>)source error:(NSError **)error;
+- (id<ORGMDecoder>)decoderForSource:(id<ORGMSource>)source error:(NSError **)error fakeExtension:(NSString*)extension;
 
 /**
  Searches for the container decoder plugin and parses container content.

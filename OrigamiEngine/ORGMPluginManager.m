@@ -118,7 +118,7 @@
 	return [[[source alloc] init] autorelease];
 }
 
-- (id<ORGMDecoder>)decoderForSource:(id<ORGMSource>)source error:(NSError **)error {
+- (id<ORGMDecoder>)decoderForSource:(id<ORGMSource>)source error:(NSError **)error fakeExtension:(NSString*)extension {
     if (!source || ![source url]) {
         return nil;
     }
@@ -128,7 +128,7 @@
         return result;
     }
 
-	NSString *extension = [[[source url] path] pathExtension];
+	//NSString *extension = [[[source url] path] pathExtension];
 	Class decoder = [_decoders objectForKey:[extension lowercaseString]];
 	if (!decoder) {
         if (error) {

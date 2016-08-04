@@ -62,10 +62,10 @@
 
 #pragma mark - public
 
-- (BOOL)openWithUrl:(NSURL *)url {
+- (BOOL)openWithUrl:(NSURL *)url andFakeExtension:(NSString*) fakeExtension {
     self.source = [[ORGMPluginManager sharedManager] sourceForURL:url error:nil];
     if (!_source || ![_source open:url]) return NO;
-    self.decoder = [[ORGMPluginManager sharedManager] decoderForSource:_source error:nil];
+    self.decoder = [[ORGMPluginManager sharedManager] decoderForSource:_source error:nil fakeExtension:fakeExtension];
     if (!_decoder || ![_decoder open:_source]) return NO;
 
     int bitsPerSample = [[_decoder.properties objectForKey:@"bitsPerSample"] intValue];

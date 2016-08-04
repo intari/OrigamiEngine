@@ -72,15 +72,17 @@ typedef enum : NSInteger {
  Starts new playback process from corresponding source with provided output type of output unit.
 
  @param outputUnitClass Class that will be used during output unit initialisation. Must be subclass of ORGMOutputUnit.
+ @param fakeExtension fake file extension to use as format specifier
  */
-- (void)playUrl:(NSURL *)url withOutputUnitClass:(Class)outputUnitClass;
+- (void)playUrl:(NSURL *)url withOutputUnitClass:(Class)outputUnitClass andFakeExtension:(NSString*)extension;
 
 /**
  Starts new playback process from corresponding source.
 
  @param url The url object to be used as a source path during playback.
+ @param fakeExtension fake file extension to use as format specifier
  */
-- (void)playUrl:(NSURL *)url;
+- (void)playUrl:(NSURL *)url withFakeExtension:(NSString*) fakeExtension;
 
 /**
  Pauses the playback.
